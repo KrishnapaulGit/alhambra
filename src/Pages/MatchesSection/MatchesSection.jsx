@@ -9,39 +9,39 @@ const MatchesSection = () => {
   const matches = [
     {
       id: '1',
-      status: 'COMING',
+      status: 'Ended',
       league: "Al-Hambra 2025",
       team1: {
         name: 'AOT',
         logo: 'https://w7.pngwing.com/pngs/348/131/png-transparent-academy-of-technology-asansol-engineering-college-maulana-abul-kalam-azad-university-of-technology-hooghly-institute-of-technology-technology-blue-angle-electronics-thumbnail.png',
-        score: '0',
-        overs: '0'
+        score: '82/5',
+        overs: '6.0'
       },
       team2: {
         name: 'IDEAL',
         logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT16Tmt3Q-97bUfZmcC6t-bDrbo3uECbdfz1g&s',
-        score: '0',
-        overs: '0'
+        score: '83/3',
+        overs: '5.0'
       },
-      result: 'Result'
+      result: 'IDEAL Won'
     },
     {
       id: '2',
-      status: 'COMING',
+      status: 'Ended',
       league: "Al-Hambra, 2025",
       team1: {
         name: 'KGEC',
         logo: 'https://avatars.githubusercontent.com/u/22374232?s=280&v=4',
-        score: '0',
-        overs: '0'
+        score: '98/2',
+        overs: '6.0'
       },
       team2: {
         name: 'JIS',
         logo: 'https://img.favpng.com/2/7/20/jis-college-of-engineering-organization-logo-supreme-knowledge-foundation-group-of-institutions-png-favpng-Jm4tzc7uG4kkLJA1LDLwadH8z.jpg',
-        score: '0',
-        overs: '0'
+        score: '72/8',
+        overs: '6.0'
       },
-      result: 'Result'
+      result: 'KGEC Won'
     },
     {
       id: '3',
