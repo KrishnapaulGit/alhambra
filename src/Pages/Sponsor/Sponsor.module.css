@@ -1,0 +1,96 @@
+/* General Styles */
+.sponsorsContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* Title Sponsor Section */
+.titleSponsor {
+    margin-bottom: 40px;
+}
+
+.titleSponsor h2 {
+    position: relative;
+    font-size: 24px;
+    color: #e91e63;
+    margin-bottom: 20px;
+    display: inline-block; /* Ensure the pseudo-elements align properly */
+}
+
+.titleSponsor h2::before,
+.titleSponsor h2::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 2px;
+    background-color: hsl(178, 90%, 46%);
+    width: 40%; /* Adjust as needed */
+}
+
+.titleSponsor h2::before {
+    left: -45%; /* Move the line to the left */
+    transform: translateX(-100%);
+}
+
+.titleSponsor h2::after {
+    right: -45%; /* Move the line to the right */
+    transform: translateX(100%);
+}
+
+.sponsorLogo img {
+    max-width: 200px;
+    height: auto;
+}
+
+/* Associate Partners Section */
+.associatePartners h2 {
+    font-size: 24px;
+    color: #e91e63;
+    margin-bottom: 20px;
+}
+
+.partnerLogos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.partnerLogo img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .titleSponsor h2 {
+        font-size: 20px; /* Smaller font size for mobile */
+    }
+
+    .titleSponsor h2::before,
+    .titleSponsor h2::after {
+        width: 30%; /* Adjust line width for smaller screens */
+    }
+
+    .sponsorLogo img {
+        max-width: 150px; /* Smaller logo for mobile */
+    }
+
+    .partnerLogo img {
+        max-width: 120px; /* Smaller partner logos for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .titleSponsor h2::before,
+    .titleSponsor h2::after {
+        width: 20%; /* Further adjust line width for very small screens */
+    }
+
+    .partnerLogos {
+        gap: 20px; /* Reduce gap between partner logos */
+    }
+}

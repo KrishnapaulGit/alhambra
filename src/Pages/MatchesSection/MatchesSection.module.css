@@ -1,0 +1,285 @@
+.container {
+  padding: 20px;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+}
+
+.container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for WebKit-based browsers (Chrome, Safari) */
+}
+
+.carousel {
+  position: relative;
+  padding: 0 40px;
+}
+
+.carouselTrack {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  padding-bottom: 10px; /* Add some padding to avoid cutting off content */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+}
+
+.carouselTrack::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for WebKit-based browsers (Chrome, Safari) */
+}
+
+.carouselButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e91e63;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.prevButton {
+  left: 0;
+}
+
+.nextButton {
+  right: 0;
+}
+
+.matchCard {
+  flex: 0 0 calc(33.333% - 14px); /* Default width for larger screens */
+  background: hsl(223.87deg 56.94% 40.98%);
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+  min-width: 280px; /* Minimum width for each card */
+}
+
+.matchCard:hover {
+  background-color: white;
+  color: black;
+  border-bottom: 2px solid #e91e63;
+}
+
+.separator {
+  height: 1px;
+  background-color: black;
+}
+
+.matchHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.matchNumber {
+  font-weight: 500;
+}
+
+.matchStatus {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.statusEnded {
+  background: #e91e63;
+}
+
+.statusUpcoming {
+  background: #ffffff;
+  color: #1a237e;
+}
+
+.leagueName {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 20px;
+  margin-top: 1rem;
+  font-size: 14px;
+}
+
+.scoreRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.teamInfo {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 5px;
+}
+
+.vsBadge {
+  background-color: hsl(324deg 100% 46.08%);
+  padding: 0.5rem;
+  border-radius: 100%;
+}
+
+.teamLogo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+}
+
+.score {
+  font-weight: 500;
+}
+
+.overs {
+  opacity: 0.8;
+  font-size: 14px;
+}
+
+.matchResult {
+  margin-top: 20px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.timeUnit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeValue {
+  background: white;
+  color: #e91e63;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.timeLabel {
+  margin-top: 5px;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.venue {
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* Responsive Adjustments for Mobile */
+@media (max-width: 767px) {
+  .container {
+      padding: 10px;
+  }
+
+  .carousel {
+      padding: 0 20px; /* Reduce padding for smaller screens */
+  }
+
+  .carouselTrack {
+      gap: 10px; /* Reduce gap between cards */
+  }
+
+  .matchCard {
+      flex: 0 0 calc(50% - 10px); /* Two cards per row on smaller screens */
+      min-width: 220px; /* Adjust minimum width for smaller screens */
+      padding: 15px; /* Reduce padding inside cards */
+  }
+
+  .carouselButton {
+      width: 30px; /* Smaller buttons for mobile */
+      height: 30px;
+      font-size: 14px; /* Adjust font size for buttons */
+  }
+
+  .prevButton {
+      left: -10px; /* Adjust button positioning */
+  }
+
+  .nextButton {
+      right: -10px; /* Adjust button positioning */
+  }
+
+  .leagueName {
+      font-size: 12px; /* Smaller font size for league name */
+  }
+
+  .teamLogo {
+      width: 25px; /* Smaller logos for mobile */
+      height: 25px;
+  }
+
+  .score {
+      font-size: 14px; /* Adjust score font size */
+  }
+
+  .overs {
+      font-size: 12px; /* Adjust overs font size */
+  }
+
+  .matchResult {
+      font-size: 12px; /* Smaller font size for match result */
+  }
+
+  .timeValue {
+      width: 30px; /* Smaller timer circles */
+      height: 30px;
+      font-size: 14px;
+  }
+
+  .timeLabel {
+      font-size: 10px; /* Smaller font size for timer labels */
+  }
+
+  .venue {
+      font-size: 12px; /* Smaller font size for venue */
+  }
+}
+
+@media (max-width: 480px) {
+  .matchCard {
+    flex: 0 0 calc(33.333% - 14px); /* One card per row on very small screens */
+      min-width: 100%; /* Full width for very small screens */
+  }
+
+  .carousel {
+      padding: 0 10px; /* Further reduce padding for very small screens */
+  }
+
+  .carouselButton {
+      width: 25px; /* Even smaller buttons for very small screens */
+      height: 25px;
+      font-size: 12px;
+  }
+
+  .prevButton {
+      left: -5px; /* Adjust button positioning */
+  }
+
+  .nextButton {
+      right: -5px; /* Adjust button positioning */
+  }
+}

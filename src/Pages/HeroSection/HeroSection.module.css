@@ -1,0 +1,235 @@
+.container {
+  background-color: #193a8a;
+  min-height: 400px;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.backgroundPattern::before,
+.backgroundPattern::after {
+  content: '';
+  position: absolute;
+  width: 24rem;
+  height: 24rem;
+  background-color: rgba(29, 78, 216, 0.1);
+  border-radius: 50%;
+}
+
+.backgroundPattern::before {
+  right: 0;
+  top: 0;
+  transform: translate(50%, -50%);
+}
+
+.backgroundPattern::after {
+  left: 0;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  color: white;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.teamLogo {
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoAndScore {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.leftTeam {
+  flex-direction: row; /* Logo on the left, score on the right */
+}
+
+.rightTeam {
+  flex-direction: row-reverse; /* Logo on the right, score on the left */
+}
+
+.scoreContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.score {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.overs {
+  font-size: 18px;
+  color: #b3b0b0;
+}
+
+.logodiv {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #b3b0b0;
+  margin-left: 10px;
+}
+
+.leftlogotext{
+  font-size: 1rem;
+  font-weight: bold;
+  color: #b3b0b0;
+  margin-right: 10px;
+  text-align: end;
+
+}
+
+.logoImage {
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;
+  padding: 0px 10px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  background-color: hsl(208.24deg 7.23% 46.08%);
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  margin-top: 20px;
+}
+
+.matchStatus {
+  position: relative;
+}
+
+.matchStatus::after {
+  position: absolute;
+  content: "";
+  width: 500px;
+  z-index: -100;
+  height: 2px;
+  background: linear-gradient(270deg, transparent 0%, hsl(240 23% 97%/0.3) 48.44%, transparent 100%);
+  left: 50%;
+  top: 74%;
+  transform: translate(-50%, -50%);
+}
+
+.teamsContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .teamsContainer {
+    flex-direction: row;
+  }
+
+  .title {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 479px) {
+  .vsBadge {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: #db2777;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+  }
+
+  .teamsContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.vsBadge {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #db2777;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+.matchInfo {
+  text-align: center;
+  color: white;
+}
+
+.timeInfo {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  margin-top: 5rem;
+}
+
+.locationContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.125rem;
+}
+
+.locationIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.matchCenterButton {
+  margin-top: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  font-weight: 600;
+  transition: color 0.2s;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.matchCenterButton:hover {
+  color: #db2777;
+}
+
+.arrowIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+}

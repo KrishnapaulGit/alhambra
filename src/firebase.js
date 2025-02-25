@@ -1,0 +1,25 @@
+// Import the functions you need from the Firebase SDKs
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore"; // Add Firestore
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
+};
+
+// Debugging: Log API key to check if it's loaded correctly
+console.log(import.meta.env.VITE_FIREBASE_API_KEY);
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+// Initialize Firestore
+const db = getFirestore(app);
+
+// Export Firestore for use in other components
+export { db };
